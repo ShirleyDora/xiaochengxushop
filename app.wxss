@@ -1,0 +1,19 @@
+/**app.wxss**/
+.ui-flex{
+  display:flex;
+}
+.separate
+{
+  height:18rpx;
+  background-color:#f2f2f2;
+  display:flex;
+}
+.ui-width-100{
+  width:100%;
+}
+.ui-padding-10{
+  padding:10rpx;
+}
+.ui-width-33{
+  width:33%;
+}

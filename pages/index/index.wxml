@@ -1,0 +1,56 @@
+<scroll-view>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.url}}" class="swiper-image" data-id="{{item.id}}" bindtap="swiperClick"></image>
+    </swiper-item>
+  </block>
+  </swiper>
+  <!-- 导航 -->
+  <view class="ui-flex">
+    <block wx:for="{{navigationData}}" wx:key="index">
+    <view class="nav-item" catchtap="navClick" data-type="{{item.name}}">
+    <image class="nav-img" src="{{item.icon}}"></image>
+    <text class="nav-text">{{item.name}}</text>
+    </view>
+    </block>
+  </view>
+  <!-- 分隔条 -->
+  <view class="separate"></view>
+
+  <!-- 最热商品   -->
+  <view class="arrangement">
+    <view>
+      <image class="small-icon-img" src="../../images/volume_small.png"></image>
+      <text class="small-text">最热</text>
+    </view>
+    <text id="center_text" style="background:#F00" class="ui-width-100">{{hot.name}}</text>
+    <image class="ui-width-100" src="{{hot.img}}" bindtap="hotClick"></image>
+  </view>
+  <!-- 分隔条 -->
+  <view class="separate"></view>
+
+  <!-- 最新商品 -->
+  <view class="arrangement">
+    <view>
+      <image class="small-icon-img" src="../../images/new_small.png"></image>
+      <text class="small-text">最新</text>
+    </view>
+    <text id="center_text" style="background:#F00" class="ui-width-100">{{newbook.name}}</text>
+    <image class="ui-width-100" src="{{newbook.img}}" bindtap="newClick"></image>
+  </view>
+  <!-- 分隔条 -->
+  <view class="separate"></view>
+
+  <!-- 畅销商品 -->
+  <view class="arrangement">
+    <view>
+      <image class="small-icon-img" src="../../images/hot_small.png"></image>
+      <text class="small-text">畅销</text>
+    </view>
+    <text id="center_text" style="background:#F00" class="ui-width-100">{{sell.name}}</text>
+    <image class="ui-width-100" src="{{sell.img}}" bindtap="sellClick"></image>
+  </view>
+</scroll-view>
+

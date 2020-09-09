@@ -1,0 +1,11 @@
+/* pages/login/login.wxss */
+.input{
+  border: 1px solid gainsboro;
+  margin: 20rpx;
+}
+.register{
+  float:right;
+  color:grey;
+  margin-top:20px;
+  margin-right:20px;
+}

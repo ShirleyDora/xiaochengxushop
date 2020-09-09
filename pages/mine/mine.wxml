@@ -1,0 +1,38 @@
+<!--pages/mine/mine.wxml-->
+<button open-type="getUserInfo" bindtap="login">点击登录小程序</button>
+<view>
+  <view class="userinfo">
+    <image class="avatar-url" src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+    <text>第{{userInfo.loginnum + 1}}次登录</text>
+  </view>
+</view>
+<!--  订单信息  -->
+<view wx:for="{{orderList}}" wx:key="index">
+  <view bindtap="showDetails" data-id="{{item.id}}" class="ui-flex">
+    <view class="ui-pl-10 ui-pr-10">
+      <view>
+        <text class="cart-shop-title">{{item.name}}</text>
+      </view>
+      <view class="ui-flex ui-pt-10 width-100">
+          <text class="cart-shop-price">￥{{item.price}}</text>
+      </view>
+      <!-- 0:未付款  1：已付款   2:已发货   3：已收货 -->
+      <view class="ui-width-80 ui-flex ui-flex-end right">
+          <view wx:if="{{item.state == 0}}">
+              未付款
+          </view>
+          <view wx:if="{{item.state == 1}}">
+              待发货
+          </view>
+          <view wx:if="{{item.state == 2}}">
+              已发货
+          </view>
+          <view wx:if="{{item.state==3}}">
+              已收货
+          </view>
+          
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/register/register.wxml-->
+<view>账号名：</view>
+<input class="input"  bindinput="getZhanghao"></input>
+<view>密码：</view>
+<input class="input"  bindinput="getMiMa"></input>
+<view>确认密码：</view>
+<input class="input"  bindinput="reMiMa"></input>
+<button bindtap="zhuce" type="primary">注册</button>
+

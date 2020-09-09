@@ -1,0 +1,38 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<view>
+    <view class="cart-shop-list">
+        <view wx:for="{{detailsList}}" wx:key="index">
+            <view class="ui-flex ui-padding-10">
+                <view>
+                    <image class="cart-shop-img" src="{{item.img}}"></image>
+                </view>
+                <view class="ui-pl-10 ui-pr-10">
+                    <view>
+                        <text class="cart-shop-title">{{item.goodname}}x{{item.goodnum}}</text>
+                    </view>
+                    <view>
+                        <text class="cart-shop-select-info ui-pt-10">已选择：{{item.goodname}}:{{item.style}}</text>                        
+                    </view>
+                    <view class="ui-flex-ui-pt-10 width-100">
+                        <text class="cart-shop-price ui-width-20">￥{{item.price}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view wx:if="{{orderState == 0}}">
+            <view class="total-count-money">总计：￥{{detailsPrice}}</view>
+            <button class="btn-area-button" bindtap="pay" type="warn">支付</button>
+        </view>
+        <view wx:if="{{orderState == 1}}">
+            <view class="notpay">待发货</view>
+        </view>
+        <view wx:if="{{orderState==2}}">
+            <button class="btn-area-button" bindtap="getGoods" type="warn">确定收货</button>
+        </view>
+        <view wx:if="{{orderState == 3}}">
+            <view class="notpay">已收货</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+/* pages/addresslist/addresslist.wxss */
+.address-phonenum
+{
+  text-align: right;
+}
+
+.default-address
+{
+  color:orangered
+}

@@ -1,0 +1,36 @@
+/* 轮播图 */
+.swiper-image{
+  width:100%;
+}
+/* 导航 */
+.nav-item{
+  width:11%;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  padding:20rpx;
+}
+.nav-img{
+  width:110rpx;
+  height:114rpx;
+}
+.nav-text{
+  padding-top:20rpx;
+  font-size:30rpx;
+}
+/* 最热商品 */
+.small-icon-img{
+  width:45rpx;
+  height:45rpx;
+  margin-right:15rpx;
+}
+.small-text{
+  font-size:30rpx;
+}
+.arrangement{
+  flex-direction:column;
+  display:flex;
+}
+#center_text{
+  text-align:center;
+}
